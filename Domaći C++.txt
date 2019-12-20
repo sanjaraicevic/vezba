@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+using namespace std;
+
+int main() {
+ int m,n,k,i;
+ //ispis teksta
+ cout<< "Unesite prvi broj:" <<endl;
+ //naredba za učitavanje broja
+ cin >> m;
+ cout<<"Unesite poslednji broj:" <<endl;
+ cin>>n;
+ cout<<"Unesite broj sa kojim želite da podelite brojeve:"<<endl;
+ cin>>k;
+ //naredba za odabir slučajnog broja iz datog intervala
+ i=rand()%(n+1-m)+m;
+ //ponavljanje naredbe dok se ne zadovolji uslov da je slučajno odabran broj deljiv brojem k
+ while(i%k!=0){
+     i=rand()%(n+1-m)+m;
+      }
+ //ispis slučajno odabranog broja
+cout<<"Slučajan broj je:"<<i;
+       
+ 
+	return 0;
+
+ }
