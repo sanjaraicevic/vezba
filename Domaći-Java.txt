@@ -1,0 +1,46 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    //Pisanje funkcije za NZD
+    public static int NZD(int a, int b){
+        int r;
+        //Računamo ostatak pri deljenju brojeva
+        r=a%b;
+        //Ispitujemo da li je ostatak jednak nuli
+        if(r==0){
+            return b;}
+        else
+        //Pozivanje funkcije kada brojevi nisu deljivi
+            return NZD(b,r);
+        }
+        
+   
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int x;
+	    System.out.println("Unesite dva broja:\n");
+	    Scanner in=new Scanner(System.in);
+	    //Unošenje brojeva sa tastature
+	    int a=in.nextInt();
+	    int b=in.nextInt();
+	    //Ispitujemo da li je prvi broj veći od drugog
+	    if(a>b){
+	        //Pozivanje funkcije ako je veći prvi broj
+	        x=NZD(a,b);
+	    }
+	    else{
+	        //Pozivanje funkcije ako je drugi broj veći
+	        x=NZD(b,a);
+	    }
+	    //Štampanje rezultata
+	    System.out.println("NZD je:"+x);
+	}
+		
+}
+	    
+	
+	
+
